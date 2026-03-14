@@ -123,6 +123,7 @@ class PartitionedMNIST(FedDataset):
         Returns:
             Dataset
         """
+        print("getting dataset")
         dataset = torch.load(
             os.path.join(self.path, type, "data{}.pkl".format(cid))), weights_only=False
         return dataset
